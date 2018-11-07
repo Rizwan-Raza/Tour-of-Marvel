@@ -1,0 +1,41 @@
+<div *ngIf="hero" class="grid-container">
+  <mat-card class="hero-card">
+    <mat-card-header>
+      <img mat-card-avatar src="{{hero.avatar}}" alt="Photo of {{hero.title}}" class="hero-avatar">
+      <mat-card-title>{{hero.title}}</mat-card-title>
+      <mat-card-subtitle>{{hero.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{hero.image}}" alt="Photo of {{hero.title}}">
+    <mat-card-content>
+      <p>
+        {{hero.name}} is {{(hero.specie.startsWith('a') || hero.specie.startsWith('e') || hero.specie.startsWith('i') || hero.specie.startsWith('o') || hero.specie.startsWith('u')) ? 'an' : 'a'}} {{hero.specie}} originated from {{hero.origin}}.
+        Appeared in <br><b *ngFor="let appear of hero.appearance; let i = index">{{appear}}<!-- {{!appear.endsWith('*') ? appear : ''}} -->{{( i < (hero.appearance.length - 2)) ? ',' : (( i == (hero.appearance.length - 2)) ? ' and' : '')}}</b>
+        {{hero.name}} is casted by {{hero.cast}}.
+      </p>
+    </mat-card-content>
+    <mat-card-actions style="display: flex;">
+      <button mat-raised-button color="primary" matTooltip="Go Back" (click)="goBack()"><mat-icon>arrow_back</mat-icon> Back</button>
+      <span style="flex: 1 1 0"></span>
+      <button mat-raised-button color="warn" matTooltip="Delete the Hero" (click)="delete(hero)"><mat-icon>delete</mat-icon> Delete</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+  <div class="container">
+    <mat-form-field>
+      <input matInput [(ngModel)]="hero.name" placeholder="Name"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="hero.title" placeholder="Title"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="hero.specie" placeholder="Specie"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="hero.origin" placeholder="Origin"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="hero.cast" placeholder="Cast"/>
+    </mat-form-field>
+    <button mat-raised-button color="accent" matTooltip="Save the Hero" (click)="save()"><mat-icon>save</mat-icon> Save</button>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.avatar {
+  height: 44px;
+  width: 44px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.mat-row:hover {
+	cursor: pointer;
+  background-color: rgba(0,0,0,.04);
+}
+.grid-container {
+  margin: 20px;
+}
+
+.selected {
+  background-color: #3f51b5 !important;
+}
+.selected .mat-cell {
+  color: white !important;
+}

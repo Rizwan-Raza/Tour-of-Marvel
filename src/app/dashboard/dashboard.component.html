@@ -1,0 +1,23 @@
+<div class="grid-container" #gridHolder>
+  <h1 class="mat-h1">Top Heroes</h1>
+  <mat-grid-list cols="{{cols}}" rowHeight="340px" (window:resize)="onResize($event)" gutterSize="20px">
+    <mat-grid-tile *ngFor="let hero of heroes">
+      <mat-card class="dashboard-card" routerLink="/detail/{{hero.id}}">
+        <mat-card-header>
+          <mat-card-title>
+            {{hero.title}}
+            <button mat-icon-button class="more-button" routerLink="/detail/{{hero.id}}">
+              <mat-icon>launch</mat-icon>
+            </button>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div class="box">
+          <img src="{{hero.image}}" class="card-image">
+            <div class="overlay">{{hero.name}}</div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

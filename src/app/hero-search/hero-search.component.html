@@ -1,0 +1,7 @@
+<mat-form-field class="search" floatLabel="never" [class.expanded]="expand" [class.shift]="shift">
+	<input type="search" matInput placeholder="Search hero" #searchBox id="search-box" (keyup)="search(searchBox.value)" [class.expanded]="expand">
+	<mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+<mat-list class="search-result mat-elevation-z8" *ngIf="searchBox.value.length" [class.expanded]="expand" [class.shift]="shift">
+	<mat-list-item *ngFor="let hero of heroes$ | async" routerLink="/detail/{{hero.id}}" (click)="searchBox.value=''">{{hero.title}}</mat-list-item>
+</mat-list>

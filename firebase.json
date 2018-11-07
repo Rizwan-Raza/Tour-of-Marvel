@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/tour-of-marvel",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

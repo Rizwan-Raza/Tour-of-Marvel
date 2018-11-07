@@ -1,0 +1,18 @@
+.hero-card {
+	max-width: 400px;
+}
+.hero-avatar {
+	object-fit: cover;
+}
+.container {
+	max-width: 450px;
+}
+.container > * {
+	width: 100%;
+}
+.grid-container {
+	margin: 20px;
+}
+mat-card-content p b {
+	display: block;
+}

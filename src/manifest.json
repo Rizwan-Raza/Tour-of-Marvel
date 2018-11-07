@@ -1,0 +1,36 @@
+{
+	"short_name": "Superheroes",
+	"name": "Marvel Superheroes",
+	"icons": [
+		{
+			"src": "/favicon.ico",
+			"type": "image/x-icon",
+			"sizes": "16x16"
+		},
+		{
+			"src": "/favicon_128.ico",
+			"type": "image/x-icon",
+			"sizes": "128x128"
+		},
+		{
+			"src": "/favicon_192.ico",
+			"type": "image/x-icon",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/favicon_256.png",
+			"type": "image/png",
+			"sizes": "256x256"
+		},
+		{
+			"src": "/favicon_512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/dashboard",
+	"background_color": "#3f51b5",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#3f51b5"
+}

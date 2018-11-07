@@ -1,0 +1,8 @@
+<div *ngIf="messagesService.messages.length" class="grid-container mat-typography">
+  <h2>Messages</h2>
+  <div *ngFor='let message of messagesService.messages'> {{message}} </div>
+  <br>
+  <button class="clear"
+          (click)="messagesService.clear()" mat-raised-button color="warn"><mat-icon>clear_all</mat-icon> Clear All</button>
+
+</div>
